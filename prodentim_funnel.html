@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ProDentim Funnel</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', sans-serif;
+            background: #f8fffa;
+            color: #222;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 720px;
+            margin: auto;
+            padding: 20px;
+        }
+        h1, h2 {
+            color: #1e6b5d;
+        }
+        .question {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid #34b28a;
+            border-radius: 8px;
+        }
+        .question label {
+            display: block;
+            margin: 8px 0;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+        button {
+            background: #e94d4d;
+            color: white;
+            border: none;
+            padding: 14px 20px;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+        .thankyou {
+            display: none;
+            background: #fff;
+            padding: 20px;
+            margin-top: 20px;
+            border-left: 5px solid #1e6b5d;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Tired of Dental Problems That Keep Coming Back?</h1>
+        <h2>Discover the Gentle 30-Second Routine That’s Changing Smiles Forever</h2>
+
+        <form id="funnelForm">
+            <div class="question">
+                <p><strong>1. How does your mouth usually feel when you wake up?</strong></p>
+                <label><input type="radio" name="q1" required> Dry or sticky</label>
+                <label><input type="radio" name="q1"> Bad breath</label>
+                <label><input type="radio" name="q1"> Fresh and clean</label>
+                <label><input type="radio" name="q1"> Depends on the day</label>
+            </div>
+
+            <div class="question">
+                <p><strong>2. Which of these sound familiar?</strong> (select all that apply)</p>
+                <label><input type="checkbox" name="q2"> I hide my smile in photos</label>
+                <label><input type="checkbox" name="q2"> I avoid going to the dentist</label>
+                <label><input type="checkbox" name="q2"> My gums bleed when I brush</label>
+                <label><input type="checkbox" name="q2"> I cover my mouth when I talk</label>
+                <label><input type="checkbox" name="q2"> I’m always chewing gum or mints</label>
+            </div>
+
+            <div class="question">
+                <p><strong>3. If you could change one thing about your oral health today, what would it be?</strong></p>
+                <label><input type="radio" name="q3" required> I want breath I’m not ashamed of</label>
+                <label><input type="radio" name="q3"> I want gums that don’t bleed</label>
+                <label><input type="radio" name="q3"> I want teeth that look clean and white</label>
+                <label><input type="radio" name="q3"> Honestly… all of the above</label>
+            </div>
+
+            <div class="question">
+                <p><strong>4. What’s been stopping you from fixing it so far?</strong></p>
+                <label><input type="radio" name="q4" required> Dental treatments are too expensive</label>
+                <label><input type="radio" name="q4"> I don’t know what really works</label>
+                <label><input type="radio" name="q4"> I’ve tried stuff that didn’t help</label>
+                <label><input type="radio" name="q4"> I’ve just been avoiding it...</label>
+            </div>
+
+            <div class="question">
+                <p><strong>5. Want expert tips + a limited-time discount?</strong></p>
+                <input type="email" name="email" placeholder="Enter your email here" required>
+            </div>
+
+            <button type="submit">See My Personalized Result</button>
+        </form>
+
+        <div class="thankyou" id="thankyouMessage">
+            <h2>You’re Closer Than You Think to a Healthier Smile!</h2>
+            <p>We’ve sent expert tips and your discount link to your inbox.</p>
+            <p><strong>Next step:</strong> <a href="https://prodentim24.com/text.php#aff=Abderrahma" target="_blank">Click here to claim your offer now »</a></p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('funnelForm');
+        const thankyou = document.getElementById('thankyouMessage');
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            const email = form.email.value;
+            const mailto = "mailto:boutaouiabid@gmail.com?subject=New Funnel Lead&body=New lead email: " + encodeURIComponent(email);
+            window.location.href = mailto;
+            form.style.display = 'none';
+            thankyou.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
